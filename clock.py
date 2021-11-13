@@ -10,10 +10,10 @@ from Tkinter import Label, Tk
 window = Tk()
 window.title("time")
 window.geometry("800x480+80+0")
-window.attributes("-alpha", "0")
+window.attributes("-fullscreen", True)
 window.resizable(False, False)
 #=========text info===========
-clock_label = Label(window,bg="silver", fg="white", font = ("calibri", 148, 'bold'), relief='flat')
+clock_label = Label(window,bg="black", fg="white", font = ("calibri", 148, 'bold'), relief='flat')
 clock_label.place(x = 0, y = 0)
 window.overrideredirect(True)
 
