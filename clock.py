@@ -3,7 +3,7 @@
 
 
 from time import strftime
-from tkinter import Label, Tk
+from Tkinter import Label, Tk
 
 #======= Configuring window =========
 window = Tk()
