@@ -1,7 +1,3 @@
-#miror screen project
-
-import matplotlib
-matplotlib.use('Agg')
 
 from time import strftime
 from Tkinter import Label, Tk
