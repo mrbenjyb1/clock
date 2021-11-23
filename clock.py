@@ -1,6 +1,6 @@
 
 from time import strftime
-from Tkinter import Label, Tk
+from tkinter import Label, Tk
 
 #======= Configuring window =========
 window = Tk()
@@ -13,12 +13,12 @@ clock_label = Label(window,bg="black", fg="white", font = ("calibri", 148, 'bold
 clock_label.place(x = 0, y = 0)
 window.overrideredirect(True)
 
-
 #=========displaying time========
 def update_label():
     current_time = strftime('%H: %M: %S')
     clock_label.configure(text = current_time)
     clock_label.after(80, update_label)
+#============main==============
 
 update_label()
 window.mainloop()
