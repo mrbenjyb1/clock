@@ -1,12 +1,11 @@
 #=======import and setup========
 from time import strftime
 from tkinter import Label, Tk
+import sys
 import os
-import matplotlib as mpl
 if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using non-interactive Agg backend')
-    mpl.use('Agg')
-import matplotlib.pyplot as plt
+    print('no display found. Using :0.0')
+    os.environ.__setitem__('DISPLAY', ':0.0')
 
 #======= Configuring window =========
 window = Tk()
