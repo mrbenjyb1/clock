@@ -16,7 +16,7 @@ window.attributes("-fullscreen", False)
 window.configure(bg="black")
 window.resizable(True, True)
 #=========text info===========
-clock_label = Label(window,bg="black", fg="white", font = ("calibri", 120, 'bold'), relief='flat')
+clock_label = Label(window,bg="black", fg="white", font = ("calibri", 100, 'bold'), relief='flat')
 clock_label.place(x = 0, y = 0)
 window.overrideredirect(True)
 
