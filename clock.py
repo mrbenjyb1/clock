@@ -1,11 +1,11 @@
 
+
 #=======import and setup========
 from time import strftime
 from tkinter import Label, Tk
 import sys
 import os
 if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
     os.environ.__setitem__('DISPLAY', ':0.0')
 
 #======= Configuring window =========
@@ -20,12 +20,25 @@ clock_label = Label(window,bg="black", fg="white", font = ("calibri", 100, 'bold
 clock_label.place(x = 0, y = 0)
 window.overrideredirect(True)
 
+date1_label = Label(window,bg="black", fg="white", font = ("calibri", 40, 'bold'), relief='flat')
+date1_label.place(x = 15, y = 150)
+window.overrideredirect(True)
+
 #=========displaying time========
 def update_label():
     current_time = strftime('%H: %M')
     clock_label.configure(text = current_time)
     clock_label.after(80, update_label)
+
+def date_label():
+    from datetime import date
+    today=date.today()
+    date=today.strftime('%d / %m / %Y')
+    date1_label.configure(text = date)
+    date1_label.after(1000, update_label)
+
 #============main==============
 
+date_label()
 update_label()
 window.mainloop()
