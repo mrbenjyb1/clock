@@ -24,7 +24,7 @@ date1_label = Label(window,bg="black", fg="white", font = ("calibri", 40, 'bold'
 date1_label.place(x = 15, y = 150)
 window.overrideredirect(True)
 
-#=========displaying time========
+#=========displaying time & date========
 def update_label():
     current_time = strftime('%H: %M')
     clock_label.configure(text = current_time)
