@@ -35,7 +35,7 @@ def date_label():
     today=date.today()
     date=today.strftime('%d / %m / %Y')
     date1_label.configure(text = date)
-    date1_label.after(1000, update_label)
+    date1_label.after(1000, date_label)
 
 #============main==============
 
